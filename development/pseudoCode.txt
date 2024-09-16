@@ -11,8 +11,8 @@ css:make a class called .frame:
 
 - place 10 spans in the DIV, create a flexbox that will always make these boxes squares, and will fill the box, not dependent on the amount
 html: place 10 spans inside the frame div
-    give them the class .pixels
-css:make a class called pixels:
+    give them the class .pixel
+css:make a class called pixel:
         for now, give box-sizing: border box (to prevent them from taking too much space)
         give them 1 px border black
         give background color grey 
@@ -20,16 +20,19 @@ css:add to .frame
         flex: 1
         do flex-wrap: wrap, to make them fill the next line
 * see if you can fill the frame evenly with 5x5
+
+- make the frame and the contents shrink together with the screen, when you make it smaller
     
 
 - Create a loop that fills the flexbox with the amount pixelAmount
 html:remove the spans
-js: LET pixelAmount be 10    
+js: LET pixelAmount be 9    
     LET frame = the frame (queryselect)
-    LOOP (createPixels): 
+    LOOP (createPixel): 
         loop runs "pixelAmount" times
-        CREATE and APPEND 10 spans to the frame
-        ADD to these spans .pixels class
+        CREATE and APPEND 9 spans to the frame
+        ADD to these spans .pixel class
+css:make min-width pixels, calc(95vh/sqrt(pixelAmount));
 
 - make the box be filled with the pixelAmount x pixelAmount
 js: LET input = 10
@@ -38,8 +41,8 @@ js: LET input = 10
 - disable the whole loop, and go back to one div. add a hover effect to that div, so the opacity then moves to 100%
 css:make a new class called: researchBlock
         let it be 150 x 150 px,
-        also add it to the pixels class, so it has the same characteristics
-    add to pixels opacity 0%
+        also add it to the pixel class, so it has the same characteristics
+    add to pixel opacity 0%
 js: comment out the loop
     CREATE and APPEND a single span
     ADD the class researchBlock to it
@@ -48,7 +51,7 @@ js: comment out the loop
         increase style character opacity to 100%
 
 - apply the hover opacity effect to the grid
-js: add to the createPixels loop:
+js: add to the createPixel loop:
         the same eventlistener from the Researchblock
 
 
@@ -63,24 +66,24 @@ css:place the textbox 1 level above (y-level) the frame
     flexbox: 1
     justify-content: space between
 
-- make a button that will generate the pixels
-    add an EVENT LISTENER to the button. If it is pressed, run function "createPixels"
-    make a FUNCTION called "createPixels"
+- make a button that will generate the pixel
+    add an EVENT LISTENER to the button. If it is pressed, run function "createPixel"
+    make a FUNCTION called "createPixel"
 
 - let the pixelamount be made by the textinput and the button        
-js: add to createPixels:
+js: add to createPixel:
         IF textBox.value > 100
             textbox.value = 100
         LET pixelAmount = textBox.value * textBox.value
 
-- make the pixels appear when a button is pressed
+- make the pixel appear when a button is pressed
 html: add a button to the .interface div,  with the text "generate"
     change the text inside the input to: amount of squares per side, max 100
-js:     place the LOOP inside createPixels
+js:     place the LOOP inside createPixel
 
 
 
-colorful pixels:
+colorful pixel:
 Rather than squares being the same color throughout the grid, randomize the squares’ RGB values with each interaction.
 - go back to a single span.
 - add to the EVENT LISTENER, that when the hover event occurs, it makes the background color of the span choose a random value
