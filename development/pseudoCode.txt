@@ -9,7 +9,7 @@ css:make a class called .frame:
         2 px border, dotted purple, background yellow
 
 
-- create a flexbox that will always make these boxes squares, and will fill the box, not dependent on the amount
+- place 10 spans in the DIV, create a flexbox that will always make these boxes squares, and will fill the box, not dependent on the amount
 html: place 10 spans inside the frame div
     give them the class .pixels
 css:make a class called pixels:
@@ -19,7 +19,7 @@ css:make a class called pixels:
 css:add to .frame
         flex: 1
         do flex-wrap: wrap, to make them fill the next line
-see if you can fill the frame evenly with 5x5
+* see if you can fill the frame evenly with 5x5
     
 
 - Create a loop that fills the flexbox with the amount pixelAmount
