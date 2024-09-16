@@ -1,0 +1,111 @@
+thinking steps:
+
+main project
+- Make one square div, always in the middle, that contains all the other divs.
+html:make a div
+css:make a class called .frame:
+        makes the height of this div 100%
+        makes the length the same amount
+        2 px border, dotted purple, background yellow
+
+
+- create a flexbox that will always make these boxes squares, and will fill the box, not dependent on the amount
+html: place 10 spans inside the frame div
+    give them the class .pixels
+css:make a class called pixels:
+        for now, give box-sizing: border box (to prevent them from taking too much space)
+        give them 1 px border black
+        give background color grey 
+css:add to .frame
+        flex: 1
+        do flex-wrap: wrap, to make them fill the next line
+see if you can fill the frame evenly with 5x5
+    
+
+- Create a loop that fills the flexbox with the amount pixelAmount
+html:remove the spans
+js: LET pixelAmount be 10    
+    LET frame = the frame (queryselect)
+    LOOP (createPixels): 
+        loop runs "pixelAmount" times
+        CREATE and APPEND 10 spans to the frame
+        ADD to these spans .pixels class
+
+- make the box be filled with the pixelAmount x pixelAmount
+js: LET input = 10
+    LET pixelAmount = input * input
+
+- disable the whole loop, and go back to one div. add a hover effect to that div, so the opacity then moves to 100%
+css:make a new class called: researchBlock
+        let it be 150 x 150 px,
+        also add it to the pixels class, so it has the same characteristics
+    add to pixels opacity 0%
+js: comment out the loop
+    CREATE and APPEND a single span
+    ADD the class researchBlock to it
+    ADD an EVENT LISTENER that listens to hover
+    make a FUNCTION increaseOpacity
+        increase style character opacity to 100%
+
+- apply the hover opacity effect to the grid
+js: add to the createPixels loop:
+        the same eventlistener from the Researchblock
+
+
+- create a textbox which does not accept any values higher than 100
+html: create a div in the left upper corner
+        give the div class .interface
+        add a textbox to it
+        add a button to it
+css:place the textbox 1 level above (y-level) the frame
+    give the .interface class 1 px border
+    10 px padding
+    flexbox: 1
+    justify-content: space between
+
+- make a button that will generate the pixels
+    add an EVENT LISTENER to the button. If it is pressed, run function "createPixels"
+    make a FUNCTION called "createPixels"
+
+- let the pixelamount be made by the textinput and the button        
+js: add to createPixels:
+        IF textBox.value > 100
+            textbox.value = 100
+        LET pixelAmount = textBox.value * textBox.value
+
+- make the pixels appear when a button is pressed
+html: add a button to the .interface div,  with the text "generate"
+    change the text inside the input to: amount of squares per side, max 100
+js:     place the LOOP inside createPixels
+
+
+
+colorful pixels:
+Rather than squares being the same color throughout the grid, randomize the squares’ RGB values with each interaction.
+- go back to a single span.
+- add to the EVENT LISTENER, that when the hover event occurs, it makes the background color of the span choose a random value
+- add this listener to the grid by adding it to the loop
+
+random disappearance:
+make it so that the color that you draw, disappears at random intervals. make sure that they last at a mimimum 200 milliseconds, and at a maximum 5 seconds. (5000 milliseconds)
+- make one span again
+- see if you can make it disappear 1 second after being colored
+- apply this to the grid
+- go back to the single span, and make it disappear at a  random moment between 200 and 5000 milliseconds
+- apply this to the grid
+- see if you can make this 
+
+
+
+effect area widened with speed
+make it so that the effected area becomes bigger when the mouse is moved faster, 
+- go back to one span
+- make an EVENT LISTENER that checks the cursor position, and when distance is 0, changes its color. 
+give it one variable "cursorDistance" (is for now 0) that can be easily modified
+- make some text appear that measures how fast the cursor is moving. 0 when not moving to, idk a higher number when moving.
+- connect the number to "cursorDistance"
+- make the box change color depending on distance and cursor speed
+- add this to your grid
+- modify the number so that that increase in size is nice compared to have fast you move your cursor, figure out some kind of math
+
+gradual fade instead of completely disappearing at once
