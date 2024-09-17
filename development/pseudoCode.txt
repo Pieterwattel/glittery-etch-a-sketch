@@ -23,6 +23,7 @@ css:add to .frame
 
 - make the frame and the contents shrink together with the screen, when you make it smaller
     
+- add one "pixel" through JS
 
 - Create a loop that fills the flexbox with the amount pixelAmount
 html:remove the spans
