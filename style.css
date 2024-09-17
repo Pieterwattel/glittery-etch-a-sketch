@@ -18,11 +18,9 @@ body{
 
 }
 
-/*the width of the pixels is now calculated with a square root of the total amount.
-it is then divided by the height or the width of the parent container,
-whichever is smaller*/
+/**/
 .pixel {
-    min-width: min(calc(95vw/sqrt(25)), calc(95vh/sqrt(25)));
+    min-width: min(calc(95vw/7), calc(95vh/7));
     background-color: grey;
     border: 1px solid black;
     box-sizing: border-box;

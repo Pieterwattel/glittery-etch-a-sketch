@@ -35,7 +35,7 @@ js: LET pixelAmount be 9
         ADD to these spans .pixel class
 css:make min-width pixels, calc(95vh/sqrt(pixelAmount));
 
-- make the box be filled with the pixelAmount x pixelAmount
+- make the box be filled with the input x input
 js: LET input = 10
     LET pixelAmount = input * input
 
