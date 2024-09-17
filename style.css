@@ -1,4 +1,4 @@
-body{
+.content{
     height: 95vh;
     display: flex;
     justify-content: center;
@@ -34,4 +34,21 @@ body{
     font-weight: 700;
     color: white;
     text-align: center;
+}
+
+.interface{
+    position:fixed;
+    z-index: 2;
+    border: 3px solid rgb(58, 58, 58);
+    border-radius: 7px;
+    display: flex;
+}
+
+.interface > *{
+    font-size: large;
+}
+
+input {
+    width: 75px;
+    margin-right: ;
 }
