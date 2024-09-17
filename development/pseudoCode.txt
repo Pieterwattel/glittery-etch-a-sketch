@@ -40,13 +40,9 @@ js: LET input = 10
     LET pixelAmount = input * input
 
 - disable the whole loop, and go back to one div. add a hover effect to that div, so the opacity then moves to 100%
-css:make a new class called: researchBlock
-        let it be 150 x 150 px,
-        also add it to the pixel class, so it has the same characteristics
-    add to pixel opacity 0%
+css:add to pixel opacity 0%
 js: comment out the loop
     CREATE and APPEND a single span
-    ADD the class researchBlock to it
     ADD an EVENT LISTENER that listens to hover
     make a FUNCTION increaseOpacity
         increase style character opacity to 100%

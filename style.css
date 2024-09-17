@@ -24,7 +24,7 @@ body{
     background-color: grey;
     border: 1px solid black;
     box-sizing: border-box;
-
+    opacity: 10%;
 }
 
 .commit {
