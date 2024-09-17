@@ -9,20 +9,19 @@
     height: 95vh;
     max-width: min(95vw, 95vh);
     max-height: 95vw;
-    background-color: rgb(168, 199, 109);
+/*    background-color: rgb(168, 199, 109); */
     position: relative;
     z-index: 0;
     display: flex;
     flex: 1;
     flex-wrap: wrap;
-
+    border: 1px solid black;
 }
 
 /**/
 .pixel {
     min-width: min(calc(95vw/7), calc(95vh/7));
     background-color: grey;
-    border: 1px solid black;
     box-sizing: border-box;
     opacity: 10%;
 }
