@@ -9,7 +9,7 @@
     height: 95vh;
     max-width: min(95vw, 95vh);
     max-height: 95vw;
-/*    background-color: rgb(168, 199, 109); */
+    background-color: 'rgb(' + r() + "," + r() + "," + r() + ')';
     position: relative;
     z-index: 0;
     display: flex;

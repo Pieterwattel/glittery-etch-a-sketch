@@ -21,7 +21,7 @@ function createPixels (){
         const pixel = document.createElement("span")
         frame.appendChild (pixel);
         pixel.classList.add("pixel");
-        pixel.addEventListener("mouseover", () => increaseOpacity(pixel))
+        pixel.addEventListener("mouseover", () => randomColor(pixel))
         pixel.style.minWidth= `min(calc(95vw/${input.value}), calc(95vh/${input.value}))`
     }
     
@@ -29,6 +29,19 @@ function createPixels (){
 
 const frame = document.getElementById("frame")
 
-function increaseOpacity(pixel){
+function randomColor(pixel){
+        pixel.style.backgroundColor = getRandomRgb();
         pixel.style.opacity= "100%"
 }
+
+function getRandomRgb() {
+    var num = Math.round(0xffffff * Math.random());
+    var r = num >> 16;
+    var g = num >> 8 & 255;
+    var b = num & 255;
+    return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+  }
+  
+  for (var i = 0; i < 10; i++) {
+    console.log(getRandomRgb());
+  }
