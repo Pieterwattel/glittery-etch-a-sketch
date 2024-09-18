@@ -21,9 +21,12 @@
 /**/
 .pixel {
     min-width: min(calc(95vw/7), calc(95vh/7));
-    background-color: grey;
     box-sizing: border-box;
-    opacity: 10%;
+    opacity: 0%;
+}
+
+.fadeOut {
+    opacity: 0%;
 }
 
 .commit {
