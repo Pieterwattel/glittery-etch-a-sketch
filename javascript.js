@@ -4,6 +4,12 @@ let button = document.getElementById("inputButton")
 
 button.addEventListener("click", checkInput)
 
+const frame = document.getElementById("frame")
+
+let pixelAmount
+
+input.value = 2
+
 function checkInput (){
     if (input.value > 100 || input.value < 1 || isNaN(input.value)){
         alert ("number was invalid, choose number between 1 and 100")
@@ -12,11 +18,11 @@ function checkInput (){
     }
 }
 
-
-let pixelAmount
+checkInput();
 
 function createPixels (){
     pixelAmount = input.value * input.value
+        frame.innerHTML="";
     for (i = pixelAmount; i > 0; i--){
         const pixel = document.createElement("span")
         frame.appendChild (pixel);
@@ -26,8 +32,6 @@ function createPixels (){
     }
     
 }
-
-const frame = document.getElementById("frame")
 
 function randomColor(pixel){
         pixel.style.backgroundColor = getRandomRgb();
