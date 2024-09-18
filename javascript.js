@@ -28,7 +28,7 @@ function createPixels (){
         frame.appendChild (pixel);
         pixel.classList.add("pixel");
         pixel.addEventListener("mouseover", () => randomColor(pixel))
-        pixel.addEventListener("mouseover", () => setTimeout(() => alert("was this delayed?"), 2000));
+        pixel.addEventListener("mouseover", () => setTimeout(() => fadeOut(pixel), 2000));
         pixel.style.minWidth= `min(calc(95vw/${input.value}), calc(95vh/${input.value}))`
     }
     
@@ -36,7 +36,8 @@ function createPixels (){
 
 function randomColor(pixel){
         pixel.style.backgroundColor = getRandomRgb();
-        pixel.style.opacity= "100%"
+        pixel.classList.remove("fadeOut");
+        pixel.classList.add("pixelColor")
 }
 
 function getRandomRgb() {
@@ -47,6 +48,7 @@ function getRandomRgb() {
     return 'rgb(' + r + ', ' + g + ', ' + b + ')';
 }
 
-function delayedFadeOut (pixel){
+function fadeOut (pixel){
+    console.log("fadeout function was run")
     pixel.classList.add("fadeOut");
 }
