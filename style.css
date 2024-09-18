@@ -1,3 +1,7 @@
+:root{
+    --time: (Math.random()*3)
+}
+
 .content{
     height: 95vh;
     display: flex;
@@ -20,8 +24,8 @@
 
 /**/
 .pixel {
-    min-width: min(calc(95vw/7), calc(95vh/7));
-    box-sizing: border-box;
+    box-sizing: content-box;
+    border: ;
     opacity: 0%;
 }
 
@@ -32,7 +36,7 @@
 .fadeOut {
     opacity: 0%;
     background-color: white;
-    transition: 0.2s ease-in-out;
+    transition:  ease-in-out 2.5s;
 }
 
 .commit {
