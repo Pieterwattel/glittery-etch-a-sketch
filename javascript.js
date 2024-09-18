@@ -28,7 +28,7 @@ function createPixels (){
         frame.appendChild (pixel);
         pixel.classList.add("pixel");
         pixel.addEventListener("mouseover", () => randomColor(pixel))
-        pixel.addEventListener("mouseover", () => setTimeout(() => fadeOut(pixel), 2000));
+        pixel.addEventListener("mouseover", () => setTimeout(() => fadeOut(pixel), 1000));
         pixel.style.minWidth= `min(calc(95vw/${input.value}), calc(95vh/${input.value}))`
     }
     
