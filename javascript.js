@@ -2,7 +2,11 @@ let input = document.getElementById("input")
 
 let button = document.getElementById("inputButton")
 
+let samplerButton = document.getElementById("colorSampler")
+
 button.addEventListener("click", checkInput)
+
+samplerButton.addEventListener("click", samplerSwitch)
 
 let color
 
@@ -10,15 +14,25 @@ const frame = document.getElementById("frame")
 
 let pixelAmount
 
-input.value = 2
+input.value = 10
 
-let colorPicker = true;
+let colorSampler = false;
 
 function checkInput (){
     if (input.value > 100 || input.value < 1 || isNaN(input.value)){
         alert ("number was invalid, choose number between 1 and 100")
     } else {
         createPixels()
+    }
+}
+
+function samplerSwitch () {
+    if (colorSampler) {
+        colorSampler = false
+        input.value = 10
+    } else {
+        colorSampler = true
+        input.value = 2
     }
 }
 
@@ -33,7 +47,7 @@ function createPixels (){
         pixel.classList.add("pixel");
         pixel.addEventListener("mouseover", () => randomColor(pixel))       
         pixel.style.minWidth= `min(calc(95vw/${input.value}), calc(95vh/${input.value}))`
-        if (colorPicker == true) {
+        if (colorSampler == true) {
 
         } else {
             pixel.addEventListener("mouseover", () => setTimeout(() => fadeOut(pixel), Math.random()*5000));
@@ -46,7 +60,7 @@ function randomColor(pixel){
         pixel.style.backgroundColor = getRandomRgb();
         pixel.classList.remove("fadeOut");
         pixel.classList.add("pixelColor")
-        if (colorPicker == true){
+        if (colorSampler == true){
             pixel.textContent = color
         } else {
         }
