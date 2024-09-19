@@ -23,7 +23,7 @@ body {
     display: flex;
     flex: 1;
     flex-wrap: wrap;
-    border: 5px solid black;
+    border: 5px solid rgb(49, 49, 49);
     border-radius: 7px;
     box-shadow: 0 0 10px 2px rgb(66, 66, 66);
     margin-top: 2vh;
@@ -68,14 +68,23 @@ body {
     border-radius: 7px;
 }
 
-.interface > *{
+.interface div {
+    display: flex;
+    flex: 1;
+    
+}
+
+.interface div > *{
     font-size: larger;
     font-weight: 550;
 }
 
 input {
     width: 75px;
-    margin-right: ;
+}
+
+#inputButton {
+    align-self: auto;
 }
 
 #colorSampler {

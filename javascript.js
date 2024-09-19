@@ -36,10 +36,12 @@ function samplerSwitch () {
         colorSampler = false
         input.value = 10
         createPixels()
+                samplerButton.textContent = "Turn on color sampler"
     } else {
         colorSampler = true
         input.value = 2
         createPixels()
+        samplerButton.textContent = "Turn on color drawing"
 
     }
 }
@@ -58,7 +60,7 @@ function createPixels (){
         if (colorSampler == true) {
 
         } else {
-            pixel.addEventListener("mouseover", () => setTimeout(() => fadeOut(pixel), Math.random()*5000));
+            pixel.addEventListener("mouseover", () => setTimeout(() => fadeOut(pixel), Math.random()*2000));
         }
     }
     
@@ -84,6 +86,5 @@ function getRandomRgb() {
 }
 
 function fadeOut (pixel){
-    console.log("fadeout function was run")
     pixel.classList.add("fadeOut");
 }
