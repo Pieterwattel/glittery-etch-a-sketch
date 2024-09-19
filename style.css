@@ -2,6 +2,10 @@
     --time: (Math.random()*3)
 }
 
+body {
+    background-color: rgb(39, 39, 39);
+}
+
 .content{
     height: 95vh;
     display: flex;
@@ -13,13 +17,16 @@
     height: 95vh;
     max-width: min(95vw, 95vh);
     max-height: 95vw;
-    background-color: 'rgb(' + r() + "," + r() + "," + r() + ')';
-    position: relative;
-    z-index: 0;
+    background-color: rgb(29, 29, 29);
+    position: absolute;
+    z-index: 1;
     display: flex;
     flex: 1;
     flex-wrap: wrap;
-    border: 1px solid black;
+    border: 5px solid black;
+    border-radius: 7px;
+    box-shadow: 0 0 10px 0px wheat;
+    margin-top: 30px;
 }
 
 /**/

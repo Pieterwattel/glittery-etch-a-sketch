@@ -28,7 +28,7 @@ function createPixels (){
         frame.appendChild (pixel);
         pixel.classList.add("pixel");
         pixel.addEventListener("mouseover", () => randomColor(pixel))
-        pixel.addEventListener("mouseover", () => setTimeout(() => fadeOut(pixel), Math.random()*3000));
+        pixel.addEventListener("mouseover", () => setTimeout(() => fadeOut(pixel), Math.random()*5000));
         pixel.style.minWidth= `min(calc(95vw/${input.value}), calc(95vh/${input.value}))`
     }
     
@@ -38,6 +38,7 @@ function randomColor(pixel){
         pixel.style.backgroundColor = getRandomRgb();
         pixel.classList.remove("fadeOut");
         pixel.classList.add("pixelColor")
+        pixel.textContent = "text"
 }
 
 function getRandomRgb() {
