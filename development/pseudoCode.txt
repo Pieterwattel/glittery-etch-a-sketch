@@ -96,16 +96,15 @@ make it so that the color that you draw, disappears at random intervals. make su
 - see if you can make this 
 
 
+add the possibility for black and white drawing
 
-effect area widened with speed
-make it so that the effected area becomes bigger when the mouse is moved faster, 
-- go back to one span
-- make an EVENT LISTENER that checks the cursor position, and when distance is 0, changes its color. 
-give it one variable "cursorDistance" (is for now 0) that can be easily modified
-- make some text appear that measures how fast the cursor is moving. 0 when not moving to, idk a higher number when moving.
-- connect the number to "cursorDistance"
-- make the box change color depending on distance and cursor speed
-- add this to your grid
-- modify the number so that that increase in size is nice compared to have fast you move your cursor, figure out some kind of math
+add a button with an event listener.
 
-gradual fade instead of completely disappearing at once
+add a style for the frame and the pixels, if you do black and white drawing
+
+see if you can separate the grid creation, the coloring, and the fading,
+separate the functions.
+
+
+
+
