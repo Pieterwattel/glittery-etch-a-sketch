@@ -19,20 +19,28 @@ input.value = 10
 let colorSampler = false;
 
 function checkInput (){
-    if (input.value > 100 || input.value < 1 || isNaN(input.value)){
-        alert ("number was invalid, choose number between 1 and 100")
+    if (colorSampler) {
+        alert ("only value 2 is allowed for colorSampler")
     } else {
-        createPixels()
+        if (input.value > 100 || input.value < 1 || isNaN(input.value)){
+            alert ("number was invalid, choose number between 1 and 100")
+        } else {
+            createPixels()
+        }
     }
+
 }
 
 function samplerSwitch () {
     if (colorSampler) {
         colorSampler = false
         input.value = 10
+        createPixels()
     } else {
         colorSampler = true
         input.value = 2
+        createPixels()
+
     }
 }
 
