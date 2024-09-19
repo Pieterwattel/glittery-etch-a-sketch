@@ -4,6 +4,8 @@ let button = document.getElementById("inputButton")
 
 button.addEventListener("click", checkInput)
 
+let color
+
 const frame = document.getElementById("frame")
 
 let pixelAmount
@@ -38,7 +40,7 @@ function randomColor(pixel){
         pixel.style.backgroundColor = getRandomRgb();
         pixel.classList.remove("fadeOut");
         pixel.classList.add("pixelColor")
-        pixel.textContent = "text"
+        pixel.textContent = color
 }
 
 function getRandomRgb() {
@@ -46,7 +48,7 @@ function getRandomRgb() {
     var r = num >> 16;
     var g = num >> 8 & 255;
     var b = num & 255;
-    return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+    return color = 'rgb(' + r + ', ' + g + ', ' + b + ')';
 }
 
 function fadeOut (pixel){
