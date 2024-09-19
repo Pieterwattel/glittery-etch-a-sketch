@@ -12,6 +12,8 @@ let pixelAmount
 
 input.value = 2
 
+let colorPicker = true;
+
 function checkInput (){
     if (input.value > 100 || input.value < 1 || isNaN(input.value)){
         alert ("number was invalid, choose number between 1 and 100")
@@ -29,9 +31,13 @@ function createPixels (){
         const pixel = document.createElement("span")
         frame.appendChild (pixel);
         pixel.classList.add("pixel");
-        pixel.addEventListener("mouseover", () => randomColor(pixel))
-        pixel.addEventListener("mouseover", () => setTimeout(() => fadeOut(pixel), Math.random()*5000));
+        pixel.addEventListener("mouseover", () => randomColor(pixel))       
         pixel.style.minWidth= `min(calc(95vw/${input.value}), calc(95vh/${input.value}))`
+        if (colorPicker == true) {
+
+        } else {
+            pixel.addEventListener("mouseover", () => setTimeout(() => fadeOut(pixel), Math.random()*5000));
+        }
     }
     
 }
@@ -40,7 +46,11 @@ function randomColor(pixel){
         pixel.style.backgroundColor = getRandomRgb();
         pixel.classList.remove("fadeOut");
         pixel.classList.add("pixelColor")
-        pixel.textContent = color
+        if (colorPicker == true){
+            pixel.textContent = color
+        } else {
+        }
+
 }
 
 function getRandomRgb() {
